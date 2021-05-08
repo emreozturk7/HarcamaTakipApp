@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.Main">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_card">
+                <TextView
+                    android:id="@+id/merhabaTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sriracha"
+                    android:textColor="#fff"
+                    android:text="Merhaba"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="60dp"
+                    android:textSize="25dp"
+                    android:layout_row="0"
+                    android:layout_column="0">
+                </TextView>
+                <TextView
+                    android:id="@+id/isimTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sriracha"
+                    android:textColor="#fff"
+                    android:text="Null"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="25dp"
+                    android:layout_row="1"
+                    android:layout_column="0">
+                </TextView>
+                <TextView
+                    android:id="@+id/harcamanizTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sriracha"
+                    android:text="Harcamanız"
+                    android:textColor="#fff"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="60dp"
+                    android:textSize="25dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="right">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tutarTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/sriracha"
+                    android:text="Null"
+                    android:textColor="#fff"
+                    android:textSize="25dp"></TextView>
+            </GridLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup
+                android:id="@+id/button_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:flexWrap="wrap"
+                app:toggle_requiredAmount="1"
+                app:toggle_selectableAmount="1">
+
+                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                    android:id="@+id/bt1"
+                    android:background="@drawable/outlined_button"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:toggle_backgroundColor="#fafafa"
+                    app:toggle_selectedBackgroundColor="#267d8e"
+                    app:toggle_text="TL"/>
+
+                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                    android:id="@+id/bt2"
+                    android:background="@drawable/outlined_button"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    app:toggle_backgroundColor="#fafafa"
+                    android:layout_height="wrap_content"
+                    app:toggle_selectedBackgroundColor="#267d8e"
+                    app:toggle_text="DOLAR"/>
+
+                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                    android:id="@+id/bt3"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/outlined_button"
+                    android:padding="10dp"
+                    app:toggle_backgroundColor="#fafafa"
+                    android:layout_height="wrap_content"
+                    app:toggle_selectedBackgroundColor="#267d8e"
+                    app:toggle_text="EURO"/>
+
+                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                    android:id="@+id/bt4"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/outlined_button"
+                    android:padding="10dp"
+                    app:toggle_backgroundColor="#fafafa"
+                    android:layout_height="wrap_content"
+                    app:toggle_selectedBackgroundColor="#267d8e"
+                    app:toggle_text="STERLİN"/>
+            </nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup>
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/currencyList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+        </ScrollView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/harcamaEkle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:background="@drawable/gradient_card"
+        android:fontFamily="@font/sriracha"
+        android:padding="10dp"
+        android:text="Harcama Ekle"
+        android:textColor="#fff"></Button>
+</FrameLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.HarcamaEkle">
+
+        <EditText
+            android:id="@+id/aciklamaEkleEditText"
+            android:layout_width="250dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="282dp"
+            android:ems="10"
+            android:hint="Açıklama"
+            android:fontFamily="@font/sriracha"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/harcamaEditText" />
+
+        <Button
+            android:id="@+id/ekleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="70dp"
+            android:fontFamily="@font/sriracha"
+            android:background="@drawable/gradient_card"
+            android:textColor="#fff"
+            android:text="EKLE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+        <EditText
+            android:id="@+id/harcamaEditText"
+            android:layout_width="250dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/sriracha"
+            android:layout_marginTop="71dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="Harcama"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/aciklamaEkleEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="103dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="255dp"
+            android:layout_marginBottom="28dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup3"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup3"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/digerRadioButton"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:textSize="13dp"
+                android:fontFamily="@font/sriracha"
+                android:text="Diğer" />
+
+            <RadioButton
+                android:id="@+id/faturaRadioButton"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:textSize="13dp"
+                android:fontFamily="@font/sriracha"
+                android:text="Fatura" />
+
+            <RadioButton
+                android:id="@+id/kiraRadioButton"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:textSize="13dp"
+                android:fontFamily="@font/sriracha"
+                android:text="Kira" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroup3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="136dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ekleButton"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup2">
+
+            <RadioButton
+                android:id="@+id/turkLiraRadioButton"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:textSize="13dp"
+                android:fontFamily="@font/sriracha"
+                android:text="TL" />
+
+            <RadioButton
+                android:id="@+id/euroRadioButton"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:textSize="13dp"
+                android:fontFamily="@font/sriracha"
+                android:text="Euro" />
+
+            <RadioButton
+                android:id="@+id/dolarRadioButton"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:textSize="13dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/sriracha"
+                android:text="Dolar" />
+
+            <RadioButton
+                android:id="@+id/sterlinRadioButton"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:textSize="13dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/sriracha"
+                android:text="Sterlin" />
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

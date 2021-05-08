@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/main"
+        android:name="com.emreozturk.harcamatakip.fragments.Main"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_main_to_harcamaEkle"
+            app:destination="@id/harcamaEkle" />
+        <action
+            android:id="@+id/action_main_to_harcamaDetay"
+            app:destination="@id/harcamaDetay" />
+        <action
+            android:id="@+id/action_main_to_isimDegis"
+            app:destination="@id/isimDegis" />
+    </fragment>
+    <fragment
+        android:id="@+id/harcamaDetay"
+        android:name="com.emreozturk.harcamatakip.fragments.HarcamaDetay"
+        android:label="fragment_harcama_detay2"
+        tools:layout="@layout/fragment_harcama_detay" >
+        <action
+            android:id="@+id/action_harcamaDetay_to_main"
+            app:destination="@id/main" />
+        <argument
+            android:name="seciliHarcama"
+            app:argType="com.emreozturk.harcamatakip.database.HarcamaTablo" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingScreen"
+        android:name="com.emreozturk.harcamatakip.onboarding.OnBoardingScreen"
+        android:label="fragment_on_boarding_screen"
+        tools:layout="@layout/fragment_on_boarding_screen" >
+        <action
+            android:id="@+id/action_onBoardingScreen_to_main"
+            app:destination="@id/main"
+            app:popUpTo="@id/onBoardingScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/isimDegis"
+        android:name="com.emreozturk.harcamatakip.fragments.IsimDegis"
+        android:label="fragment_isim_degis3"
+        tools:layout="@layout/fragment_isim_degis" >
+        <action
+            android:id="@+id/action_isimDegis_to_main"
+            app:destination="@id/main" />
+    </fragment>
+    <fragment
+        android:id="@+id/harcamaEkle"
+        android:name="com.emreozturk.harcamatakip.fragments.HarcamaEkle"
+        android:label="fragment_harcama_ekle"
+        tools:layout="@layout/fragment_harcama_ekle" >
+        <action
+            android:id="@+id/action_harcamaEkle_to_main"
+            app:destination="@id/main" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.emreozturk.harcamatakip.fragments.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_main"
+            app:destination="@id/main"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreen_to_onBoardingScreen"
+            app:destination="@id/onBoardingScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
